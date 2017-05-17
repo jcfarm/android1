@@ -22,7 +22,7 @@ public class LauncherActivity extends Activity {
             }
         }, 2000);
     }
-    //try
+    //lihao shi 
 
     /**
      * 启动主页面
