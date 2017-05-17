@@ -22,6 +22,7 @@ public class LauncherActivity extends Activity {
             }
         }, 2000);
     }
+    //12121
 
     /**
      * 启动主页面
