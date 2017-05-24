@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+              xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical" >
+    <include layout="@layout/titlebar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/bt_selectall"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:text="全选" />
+            <Button
+                android:id="@+id/bt_cancleselectall"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:text="反选" />
+
+            <Button
+                android:id="@+id/bt_deselectall"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:text="取消选择" />
+            <Button
+                android:id="@+id/bt_put"
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:text="确定" />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/line" />
+    </RelativeLayout>
+</LinearLayout>
