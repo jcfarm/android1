@@ -2,7 +2,7 @@
 智慧农场Android客户端1组
 TEST!
 
-plne-- nicewin
+palne-- nicewin
 
 
 

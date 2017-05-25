@@ -17,4 +17,5 @@
     <color name="navigationBarColor">#000000</color>
     <color name="colorAccent">#009688</color>
     <color name="textSecondary">#727272</color>
+    <color name="greycolor">#cfc8dc</color>
 </resources>

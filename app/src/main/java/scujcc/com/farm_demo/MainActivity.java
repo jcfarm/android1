@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab_view);
+       setContentView(R.layout.tab_view);
 
         initViewDraw();
         /**

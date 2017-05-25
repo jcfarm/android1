@@ -1,13 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
-    <TextView
-        android:id="@+id/control_textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="水泵/电磁阀"
+        android:layout_marginStart="30dp"
+        android:layout_alignBaseline="@+id/switch0"
+        android:layout_alignBottom="@+id/switch0"
+        android:layout_toEndOf="@+id/switch0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="环流风机"
+        android:layout_alignBottom="@+id/switch5"
+        android:layout_alignStart="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="照明灯"
+        android:layout_alignBaseline="@+id/switch4"
+        android:layout_alignBottom="@+id/switch4"
+        android:layout_alignStart="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/mText"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="63dp"
+        android:gravity="center"
+        android:text=""
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="遮阳网"
+        android:layout_alignBottom="@+id/switch3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="侧卷膜"
+        android:layout_alignBottom="@+id/switch2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="顶卷膜"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_alignStart="@+id/textView1" />
+
+    <Switch
+        android:id="@+id/switch0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+
+
+        android:layout_below="@+id/switch4"
+        android:layout_alignStart="@+id/switch4" />
+    <!--android:track="@drawable/"android:thumb="@android:color/transparent"-->
+    <Switch
+        android:id="@+id/switch5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch4"
+        android:layout_alignStart="@+id/switch4" />
+
+    <Switch
+           android:id="@+id/switch4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+       <Switch
+           android:id="@+id/switch3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="22dp"
+           android:layout_below="@+id/switch2"
+           android:layout_alignStart="@+id/switch2" />
+
+       <Switch
+           android:id="@+id/switch2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="14dp"
+           android:layout_below="@+id/switch1"
+           android:layout_alignStart="@+id/switch1" />
+
+       <Switch
+           android:id="@+id/switch1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_below="@+id/switch0"
+           android:layout_alignStart="@+id/switch0" />
+
+   </RelativeLayout>
