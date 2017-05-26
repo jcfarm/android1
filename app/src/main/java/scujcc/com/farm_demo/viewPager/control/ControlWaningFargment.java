@@ -260,7 +260,7 @@ public class ControlWaningFargment extends Fragment{
         String url = "http://www.zhiyun-tech.com/App/Rider-M/changelog-zh.txt";
 //        url="http://www.391k.com/api/xapi.ashx/info.json?key=bd_hyrzjjfb4modhj&size=10&page=1";
         Log.e(TAG,"====controlStr====="+controlStr);
-        url = "http://171.212.149.251:8080/controller?str="+controlStr;
+        url = "http://10.8.105.221:8080/controller?str="+controlStr;
         OkHttpUtils
                 .post()
                 .url(url)
