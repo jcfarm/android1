@@ -18,6 +18,7 @@
             android:layout_height="30dip"
             android:src="@drawable/jkx"/>
         <TextView
+            style="@style/wordType16sp"
             android:id="@+id/fragment_home_control_content"
             android:padding="20sp"
             android:gravity="left"

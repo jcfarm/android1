@@ -18,16 +18,16 @@
                 android:layout_height="30dip"
                 android:src="@drawable/jkx"/>
             <TextView
+                style="@style/wordType16sp"
                 android:id="@+id/home_control1_content"
                 android:padding="20sp"
                 android:gravity="left"
                 android:layout_weight="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:textColor="#000000"
                 android:text="电磁阀"/>
             <Switch
+                style="@style/wordType12sp"
                 android:textOff="关闭"
                 android:textOn="开启"
                 android:id="@+id/home_control1_sw"

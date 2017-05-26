@@ -1,0 +1,95 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8e0e8"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        style="@style/wordType12sp"
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="#eceff1"
+        android:gravity="center"
+        android:paddingRight="4dp"
+        android:text="2017.5.18"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="22dp">
+
+        <ImageView
+            android:id="@+id/iv_user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/a"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/wordType16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/iv_user_image"
+            android:background="@drawable/center_collect_play"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="left|center"
+            android:lineSpacingExtra="2dp"
+
+            android:text="hi"
+            android:textColor="#ff000000"
+            android:textSize="14sp" />
+
+        <!--<ListView-->
+            <!--android:id="@+id/msg_list_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_weight="100dp"-->
+            <!--android:divider="#0000"></ListView>-->
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            style="@style/wordType12sp"
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入聊天内容"
+            android:maxLines="2" />
+
+        <Button
+            style="@style/buttonNormal16sp"
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="发送" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

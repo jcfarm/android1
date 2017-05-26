@@ -1,24 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    tools:context="scujcc.com.farm_demo.LauncherActivity">
+    android:weightSum="1">
 
-    <ImageView
-        android:id="@+id/iv_icon"
+    <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-         />
+        android:layout_marginLeft="155dp"
+        android:layout_marginRight="155dp"
+        android:layout_marginTop="20dp"
+        >
 
-    <TextView
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/iv_icon"
-        android:text="农场demo"
+        <RelativeLayout
+            android:id="@+id/login_div"
+            android:layout_width="match_parent"
+            android:layout_height="263dp"
+            android:layout_margin="15dp"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/login_password_input"
+                android:layout_alignEnd="@+id/imageView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/imageView2"
+                android:layout_below="@+id/login_user_input"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+            <TextView
+                style="@style/wordType16sp"
+                android:id="@+id/login_user_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/login_label_username"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                style="@style/wordType12sp"
+
+                android:id="@+id/username_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_user_input"
+                android:layout_toEndOf="@+id/imageView"
+                android:hint="@string/login_username_hint"
+                android:inputType="text"
+                android:textAllCaps="true"
+                android:textColor="?android:attr/textColorHint"
+                android:textSize="12sp"
+                android:typeface="monospace" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_lock_idle_lock"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                style="@style/wordType16sp"
+                android:id="@+id/login_password_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username_edit"
+                android:layout_marginTop="15dp"
+                android:text="@string/login_label_password"
+                android:textAllCaps="false"
+                android:textColor="?android:attr/textColorAlertDialogListItem" />
+
+            <EditText
+                style="@style/wordType12sp"
+
+                android:id="@+id/password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_password_input"
+                android:layout_toEndOf="@+id/imageView2"
+                android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
+            />
+
+
+            <Button
+                android:id="@+id/login_button"
+                style="@style/buttonNormal16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/password_edit"
+                android:layout_below="@+id/password_edit"
+                android:text="@string/login_button_text"
+                android:textColor="?attr/colorButtonNormal" />
+
+            <TextView
+                style="@style/wordType12sp"
+
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/login_register_link"
+                android:layout_alignBaseline="@+id/findPassword"
+                android:layout_alignBottom="@+id/findPassword"
+                android:layout_alignStart="@+id/password_edit" />
+
+
+            <TextView
+                style="@style/wordType12sp"
+                android:id="@+id/findPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:text="没有账号"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="13dp" />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="134dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/a"
+            android:id="@+id/imageView4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/b"
+
+            android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
+</LinearLayout>

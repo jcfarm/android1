@@ -11,7 +11,6 @@
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:textSize="15dp"
-        android:textStyle="bold" />
+        style="@style/wordType16sp"/>
 
 </RelativeLayout>

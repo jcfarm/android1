@@ -60,6 +60,8 @@ public class MonitorRecyclerViewAdapter extends RecyclerView.Adapter<MonitorRecy
             Log.d("MonitorTextViewHolder", "onClick--> position = " + getPosition());
             Intent intent = new Intent(mContext, MonitorDetails.class);
             intent.putExtra("Position", getPosition()+1);
+            intent.putExtra("url","rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov");
+            //rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov(网络可用的流地址)
             mContext.startActivity(intent);
         }
     }

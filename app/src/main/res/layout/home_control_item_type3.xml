@@ -27,7 +27,7 @@
                 android:layout_weight="6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
+                style="@style/wordType16sp"
                 android:text="电磁阀"/>
             <ImageView
                 android:id="@+id/home_control3_sign"
@@ -66,12 +66,14 @@
                 android:orientation="horizontal">
                 <TextView android:id="@+id/TextView31"
                           android:gravity="left"
+                    style="@style/wordType12sp"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
                           android:layout_weight="1"
                           android:text="0"
                     />
                 <TextView android:id="@+id/TextValue32"
+                    style="@style/wordType12sp"
                           android:gravity="center"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
@@ -80,6 +82,7 @@
 
                     />
                 <TextView android:id="@+id/TextView33"
+                    style="@style/wordType12sp"
                           android:layout_weight="1"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
