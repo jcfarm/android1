@@ -33,23 +33,21 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/wordType16sp"
                     android:id="@+id/text_view41"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20sp"
-
-                    android:textColor="#000000"
-                    android:textSize="16sp"
                     android:text="JAVA"/>
 
                 <TextView
                     android:id="@+id/text_view42"
-                    android:textSize="16dp"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
+
+                    style="@style/wordType16sp"
                     android:text="17"
                     />
             </LinearLayout>
@@ -89,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    style="@style/wordType12sp"
                     android:textStyle="bold|italic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -96,6 +95,8 @@
                     android:gravity="center"
                     android:text="0℃"/>
                 <TextView
+
+                    style="@style/wordType12sp"
                     android:textStyle="bold|italic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,6 +131,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+                    style="@style/wordType12sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -137,6 +139,7 @@
                     android:textStyle="bold|italic"
                     android:text="0℃"/>
                 <TextView
+                    style="@style/wordType12sp"
                     android:textStyle="bold|italic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

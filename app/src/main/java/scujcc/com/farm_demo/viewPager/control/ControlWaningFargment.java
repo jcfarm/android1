@@ -27,30 +27,28 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import okhttp3.Call;
 import okhttp3.Request;
 import scujcc.com.farm_demo.R;
-import scujcc.com.farm_demo.viewPager.control.MyAdapter.ViewHolder;
-import scujcc.com.farm_demo.viewPager.home.HomeControlListAdapter;
+
 
 /**
  * Created by hello-brothers on 2017/5/22.
  */
 
 public class ControlWaningFargment extends Fragment{
-    private static final String TAG = ControlWaningFargment.class.getSimpleName();;
 
+    private TextView tv_title;
+    private String title;
+
+    private static final String TAG = ControlWaningFargment.class.getSimpleName();;
+    View v=null;
     private static final String NAME_TITLE = null;
     private ListView lv;
-    private TextView tv_title;
-
-    private MyAdapter mAdapter;
+    private MyAdapter2 mAdapter;
     private ArrayList<String> list;
     ArrayList<HashMap<String, Object>> ls;
-    private Button bt_selectall;
-    private Button bt_cancel;
-    private Button bt_deselectall;
-    private Button bt_put;
+
     public int checkNum; // 记录选中的条目数量
     private TextView tv_show;// 用于显示选中的条目数量
-    private String title;
+
 
     public static ControlWaningFargment newInstance(String title) {
 
@@ -66,98 +64,84 @@ public class ControlWaningFargment extends Fragment{
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+
         if (getArguments() != null) {
             title = getArguments().getString("title");
         }
 
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 
-        Log.e("TGA","====onCreateOptionsMenu=====");
-//        menu.add("Menu 1a").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-//        menu.add("Menu 1b").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_control, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
-    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.control_pump_fragment, container, false);
+        v= inflater.inflate(R.layout.control_pump_fragment, container, false);
 
 
         tv_title = (TextView) v.findViewById(R.id.home_farm_id);
         tv_title.setText(title);
 
         lv = (ListView) v.findViewById(R.id.lv);
-        bt_selectall = (Button) v.findViewById(R.id.bt_selectall);
-        bt_cancel = (Button) v.findViewById(R.id.bt_cancleselectall);
-        bt_deselectall = (Button) v.findViewById(R.id.bt_deselectall);
         tv_show = (TextView) v.findViewById(R.id.tv);
-        bt_put = (Button) v.findViewById(R.id.bt_put);
+
+
         list = new ArrayList<String>();
         // 为Adapter准备数据
         ls = new ArrayList<HashMap<String, Object>>();
         initDate();
 
         // 实例化自定义的MyAdapter
-        mAdapter = new MyAdapter(list, getContext());
+        mAdapter = new MyAdapter2(list, getContext());
         // 绑定Adapter
         lv.setAdapter(mAdapter);
-        // 全选按钮的回调接口
-        bt_selectall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 遍历list的长度，将MyAdapter中的map值全部设为true
-                for (int i = 0; i < list.size(); i++) {
-                    MyAdapter.getIsSelected().put(i, true);
-                }
-                // 数量设为list的长度
-                checkNum = list.size();
-                // 刷新listview和TextView的显示
-                dataChanged();
-            }
-        });
-        // 反选按钮的回调接口
-        bt_cancel.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 遍历list的长度，将已选的设为未选，未选的设为已选
-                for (int i = 0; i < list.size(); i++) {
-                    if (MyAdapter.getIsSelected().get(i)) {
-                        MyAdapter.getIsSelected().put(i, false);
-                        checkNum--;
-                    } else {
-                        MyAdapter.getIsSelected().put(i, true);
-                        checkNum++;
-                    }
-                }
-                // 刷新listview和TextView的显示
-                dataChanged();
-            }
-        });
-        // 取消按钮的回调接口
-        bt_deselectall.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 遍历list的长度，将已选的按钮设为未选
-                for (int i = 0; i < list.size(); i++) {
-                    if (MyAdapter.getIsSelected().get(i)) {
-                        MyAdapter.getIsSelected().put(i, false);
-                        checkNum--;// 数量减1
-                    }
-                }
-                // 刷新listview和TextView的显示
-                dataChanged();
-            }
-        });
+//        // 全选按钮的回调接口
+//        bt_selectall.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // 遍历list的长度，将MyAdapter中的map值全部设为true
+//                for (int i = 0; i < list.size(); i++) {
+//                    MyAdapter.getIsSelected().put(i, true);
+//                }
+//                // 数量设为list的长度
+//                checkNum = list.size();
+//                // 刷新listview和TextView的显示
+//                dataChanged();
+//            }
+//        });
+//        // 反选按钮的回调接口
+//        bt_cancel.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // 遍历list的长度，将已选的设为未选，未选的设为已选
+//                for (int i = 0; i < list.size(); i++) {
+//                    if (MyAdapter.getIsSelected().get(i)) {
+//                        MyAdapter.getIsSelected().put(i, false);
+//                        checkNum--;
+//                    } else {
+//                        MyAdapter.getIsSelected().put(i, true);
+//                        checkNum++;
+//                    }
+//                }
+//                // 刷新listview和TextView的显示
+//                dataChanged();
+//            }
+//        });
+//        // 取消按钮的回调接口
+//        bt_deselectall.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // 遍历list的长度，将已选的按钮设为未选
+//                for (int i = 0; i < list.size(); i++) {
+//                    if (MyAdapter.getIsSelected().get(i)) {
+//                        MyAdapter.getIsSelected().put(i, false);
+//                        checkNum--;// 数量减1
+//                    }
+//                }
+//                // 刷新listview和TextView的显示
+//                dataChanged();
+//            }
+//        });
         // 绑定listView的监听器
        /*lv.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -183,17 +167,17 @@ public class ControlWaningFargment extends Fragment{
         });*/
 
 
-        bt_put.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), MyAdapter.isSelected.toString(), Toast.LENGTH_SHORT).show();
-                Log.e("TGA",MyAdapter.isSelected.toString()+"");
-                getDataPostByOkhttpUtils(MyAdapter.isSelected);
-            }
-        });
-
+//        bt_put.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(v.getContext(), MyAdapter.isSelected.toString(), Toast.LENGTH_SHORT).show();
+//                Log.e("TGA",MyAdapter.isSelected.toString()+"");
+//                getDataPostByOkhttpUtils(MyAdapter.isSelected);
+//            }
+//        });
+//
         return v;
-    }
+   }
 
 
     // 初始化数据
@@ -211,6 +195,62 @@ public class ControlWaningFargment extends Fragment{
 
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        Log.e("TGA","====onCreateOptionsMenu=====");
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_control, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.all_checked:
+                // 遍历list的长度，将MyAdapter中的map值全部设为true
+                for (int i = 0; i < list.size(); i++) {
+                    MyAdapter2.getIsSelected().put(i, true);
+                }
+                // 数量设为list的长度
+                checkNum = list.size();
+                // 刷新listview和TextView的显示
+                dataChanged();
+                return true;
+            case R.id.back_checked:
+                // 遍历list的长度，将已选的设为未选，未选的设为已选
+                for (int i = 0; i < list.size(); i++) {
+                    if (MyAdapter2.getIsSelected().get(i)) {
+                        MyAdapter2.getIsSelected().put(i, false);
+                        checkNum--;
+                    } else {
+                        MyAdapter2.getIsSelected().put(i, true);
+                        checkNum++;
+                    }
+                }
+                // 刷新listview和TextView的显示
+                dataChanged();
+                return true;
+            case R.id.cancel_checked:
+                // 遍历list的长度，将已选的按钮设为未选
+                for (int i = 0; i < list.size(); i++) {
+                    if (MyAdapter2.getIsSelected().get(i)) {
+                        MyAdapter2.getIsSelected().put(i, false);
+                        checkNum--;// 数量减1
+                    }
+                }
+                // 刷新listview和TextView的显示
+                dataChanged();
+                return true;
+            case R.id.sure_checked:
+                Toast.makeText(v.getContext(), MyAdapter2.isSelected.toString(), Toast.LENGTH_SHORT).show();
+                Log.e("TGA",MyAdapter2.isSelected.toString()+"");
+                getDataPostByOkhttpUtils(MyAdapter2.isSelected);
+                dataChanged();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     /**
      * 使用okhttp-utils的post请求网络文本数据
@@ -220,7 +260,7 @@ public class ControlWaningFargment extends Fragment{
         String url = "http://www.zhiyun-tech.com/App/Rider-M/changelog-zh.txt";
 //        url="http://www.391k.com/api/xapi.ashx/info.json?key=bd_hyrzjjfb4modhj&size=10&page=1";
         Log.e(TAG,"====controlStr====="+controlStr);
-        url = "http://171.212.149.251:8080/controller?str="+controlStr;
+        url = "http://10.8.105.221:8080/controller?str="+controlStr;
         OkHttpUtils
                 .post()
                 .url(url)

@@ -141,7 +141,7 @@ public class HomeFragment extends BaseFragment {
 
     private void getDataFromNet() {
         Log.e(TAG,"getDataFromNet=============");
-        url = "http://171.212.149.251:8090/FileUpload/upload/fields.txt";
+        url = "http://10.8.105.221:8090/FileUpload/upload/fields.txt";
         //得到缓存的数据
         String saveJson = CacheUtils.getString(getActivity(),url);
         Log.e(TAG,"=====saveJson====");

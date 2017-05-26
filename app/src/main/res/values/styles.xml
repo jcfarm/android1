@@ -33,5 +33,43 @@
 
     <style name="Theme.AppTheme.TranslucentStatusBar" parent="Theme.AppCompat.Light.NoActionBar" />
 
+    <style name="wordType16sp">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+       <item name="android:color">@android:color/background_dark</item>
+    </style>
+    <style name="wordType12sp">
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:color">?android:attr/textColorHint</item>
+
+    </style>
+
+    <style name="buttonNormal16sp">
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@android:color/background_dark</item>
+    </style>
+    <style name="titleStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="wordHintl14sp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="wordTitle20sp">
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
 
 </resources>

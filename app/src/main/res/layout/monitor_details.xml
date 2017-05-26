@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <TextView
-        android:id="@+id/monitor_id"
+        style="@style/wordType16sp"
+        android:id="@+id/monitor_id"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="显示摄像头"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        //顶部文字
+        <TextView
+            android:id="@+id/streamplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="显示几号田"
+            android:textColor="@color/dark_red"
+            android:textSize="24sp"/>
+
+        //视图窗口
+        <VideoView
+            android:id="@+id/rtsp_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+</FrameLayout>

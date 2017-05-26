@@ -10,7 +10,10 @@
 
     <TextView
         android:id="@+id/text_view"
-        android:padding="20dp"
+android:gravity="center"
+        style="@style/wordType16sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="vvvv" />
 </android.support.v7.widget.CardView>

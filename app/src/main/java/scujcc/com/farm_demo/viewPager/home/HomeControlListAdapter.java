@@ -441,7 +441,7 @@ public class HomeControlListAdapter extends BaseAdapter {
     public void getDataPostByOkhttpUtils(int farm_Id, boolean isChecked, int pos) {
         String url = "http://www.zhiyun-tech.com/App/Rider-M/changelog-zh.txt";
 //        url="http://www.391k.com/api/xapi.ashx/info.json?key=bd_hyrzjjfb4modhj&size=10&page=1";
-        url = "http://171.212.149.251:8080/greeting?farm_Id="+farm_Id+"&position="+pos+"&isChecked="+isChecked;
+        url = "http://10.8.105.221:8080/greeting?farm_Id="+farm_Id+"&position="+pos+"&isChecked="+isChecked;
         OkHttpUtils
                 .post()
                 .url(url)
