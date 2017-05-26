@@ -60,6 +60,7 @@ public class MonitorRecyclerViewAdapter extends RecyclerView.Adapter<MonitorRecy
             Log.d("MonitorTextViewHolder", "onClick--> position = " + getPosition());
             Intent intent = new Intent(mContext, MonitorDetails.class);
             intent.putExtra("Position", getPosition()+1);
+            intent.putExtra("url","rtsp://10.8.105.221:8554/video.mkv");
             mContext.startActivity(intent);
         }
     }
