@@ -6,7 +6,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
         <CheckBox
             android:padding="10dp"
             android:paddingLeft="30dp"
@@ -24,9 +25,17 @@
             android:padding="20sp"
             android:paddingRight="30dp"
             android:text="1"
-            android:textColor="#000000"
-            android:textSize="16dp"/>
+            style="@style/wordType16sp"/>
     </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp" />
 
 
 </RelativeLayout>

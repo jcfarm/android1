@@ -4,6 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <TextView
+        style="@style/wordType16sp"
         android:id="@+id/monitor_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

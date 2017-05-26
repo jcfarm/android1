@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto"
-      >
+      > <!--android:id="@+id/action_click"   android:icon="@drawable/ic_check_all"-->
 
     <item
-        android:id="@+id/action_click"
+       android:id="@+id/all_checked"
         android:title="全选"
         android:icon="@drawable/ic_check_all"
         app:showAsAction="ifRoom|withText" />
-
+    <item
+        android:id="@+id/back_checked"
+        android:title="反选"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/cancel_checked"
+        android:title="取消选择"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/sure_checked"
+        android:title="确定"
+        app:showAsAction="ifRoom"/>
 
 </menu>

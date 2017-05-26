@@ -77,7 +77,7 @@ public class MonitoringFragment extends BaseFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));//这里用线性显示 类似于list view
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));//这里用线性显示 类似于list view
 
         mRecyclerView.setAdapter(new MonitorRecyclerViewAdapter(getActivity()));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());

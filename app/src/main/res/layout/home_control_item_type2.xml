@@ -20,15 +20,17 @@
                 android:layout_width="30dip"
                 android:layout_height="30dip"
                 android:src="@drawable/jkx"/>
+
             <TextView
                 android:id="@+id/home_control2_content"
-                android:padding="20sp"
-                android:gravity="left"
-                android:layout_weight="6"
+                style="@style/wordType16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:text="电磁阀"/>
+                android:layout_weight="6"
+                android:gravity="left"
+                android:padding="20sp"
+                android:text="电磁阀"
+                 />
             <ImageView
                 android:id="@+id/home_control2_sign"
                 android:layout_width="wrap_content"
@@ -64,7 +66,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-                <TextView android:id="@+id/TextView21"
+                <TextView
+                    style="@style/wordType12sp"
+                        android:id="@+id/TextView21"
                           android:gravity="left"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
@@ -72,6 +76,7 @@
                           android:text="0"
                            />
                 <TextView android:id="@+id/TextValue22"
+                    style="@style/wordType12sp"
                           android:gravity="center"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
@@ -80,6 +85,7 @@
 
                            />
                 <TextView android:id="@+id/TextView23"
+                    style="@style/wordType12sp"
                           android:layout_weight="1"
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"

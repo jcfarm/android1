@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
     <TextView
+        style="@style/wordType16sp"
         android:id="@+id/log_textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
