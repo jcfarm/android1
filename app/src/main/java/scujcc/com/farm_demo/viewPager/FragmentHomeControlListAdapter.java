@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,7 +17,7 @@ import java.util.HashMap;
 
 import scujcc.com.farm_demo.R;
 import scujcc.com.farm_demo.viewPager.control.BaseControlActivity;
-/////*********************将图片存入数组,根据position来qu图片*************************////
+
 
 /**
  * Created by hello-brothers on 2017/5/21.
@@ -30,8 +31,6 @@ public class FragmentHomeControlListAdapter extends BaseAdapter {
     private String[] contents =null;
     ImageView img;
     TextView content;
-
-    private String[] images={"t32","t12","t13","t14","t17","t20","t22","t23"};
 
     public FragmentHomeControlListAdapter(Context context, ArrayList<HashMap<String, Object>> runRank) {
         Log.e("TGA","FragmentHomeControlListAdapter");
@@ -68,16 +67,10 @@ public class FragmentHomeControlListAdapter extends BaseAdapter {
             img = (ImageView) convertView.findViewById(R.id.fragment_home_control_img);
             content = (TextView) convertView.findViewById(R.id.fragment_home_control_content);
 
-//            HashMap<Integer, Integer> map = new HashMap<>();
-//            for (int i = 0; i < 6; i++) {
-//
-//                String imgname="R.drawable."+images[position];
-//                Integer imgnameId=Integer.parseInt(imgname);
-//                 map.put(i, imgnameId);
-//            }
-//
-//            img.setImageResource(map.get(position));
-             img.setImageResource(R.drawable.t32);
+
+
+
+            img.setImageResource(R.drawable.jkx);
             content.setText(contents[position]);
 
             convertView.setOnClickListener(new View.OnClickListener() {

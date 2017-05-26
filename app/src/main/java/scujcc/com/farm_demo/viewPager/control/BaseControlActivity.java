@@ -17,9 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import scujcc.com.farm_demo.AboutUs;
 import scujcc.com.farm_demo.R;
-import scujcc.com.farm_demo.seeProblem;
 
 /**
  * Created by hello-brothers on 2017/5/21.
@@ -47,11 +45,6 @@ public class BaseControlActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         fragment = fm.findFragmentById(R.id.control_fragment_container);
         initFragment();
-
-        //********
-        // 页面选择跳转
-        // **********//
-
         fragment = mBaseFragment.get(content_id);
         Log.e("TGA","===fragment==="+fragment);
         fm.beginTransaction().add(R.id.control_fragment_container, fragment)
@@ -89,24 +82,13 @@ public class BaseControlActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_normal_question) {
             Toast.makeText(getApplicationContext(), "setting action is selected!", Toast.LENGTH_SHORT).show();
-            ///****************
-            // 进行页面跳转***//
-            Intent intent=new Intent(this, AboutUs.class);
-            startActivity(intent);
-
-
             return true;
         }
         if (id == R.id.action_about) {
             Toast.makeText(getApplicationContext(), "about action is selected!", Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(BaseControlActivity.this, seeProblem.class);
-            startActivity(intent);
-
-
             return true;
-
-
         }
+
 
         if (id == R.id.action_search) {
             Toast.makeText(getApplicationContext(), "Search action is selected!", Toast.LENGTH_SHORT).show();

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,9 +68,6 @@ public class MyAdapter extends BaseAdapter {
             holder = new ViewHolder();
             // 导入布局并赋值给convertview
             convertView = inflater.inflate(R.layout.listviewitem, null);
-            holder.seekBar=(SeekBar)convertView.findViewById(R.id.seekBar);
-            holder.seekBar.setVisibility(View.INVISIBLE);
-
             holder.tv = (TextView) convertView.findViewById(R.id.item_tv);
             holder.cb = (CheckBox) convertView.findViewById(R.id.item_cb);
              holder.tv_show = (TextView) convertView.findViewById(R.id.tv);
@@ -96,13 +92,6 @@ public class MyAdapter extends BaseAdapter {
                     // 用TextView显示
                     Log.e("TGA",checkNum+"");
 //                    holder.tv_show.setText("已选中"  + "项");
-
-                    //*********xianshiyuyingchang************//
-
-
-
-
-
                 }
             });
             // 为view设置标签
@@ -124,7 +113,6 @@ public class MyAdapter extends BaseAdapter {
         MyAdapter.isSelected = isSelected;
     }
     public static class ViewHolder {
-        SeekBar seekBar;
         TextView tv;
         CheckBox cb;
         TextView tv_show;

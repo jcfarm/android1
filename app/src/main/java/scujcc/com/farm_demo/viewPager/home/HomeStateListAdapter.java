@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -21,9 +22,10 @@ import scujcc.com.farm_demo.R;
  */
 
 public class HomeStateListAdapter extends BaseAdapter{
-    ArrayList<HashMap<String, Object>> ls;
+    String[] ls;
 
     private HomeStateFragment mContext;
+
 
 
     LayoutInflater inflater;
@@ -35,9 +37,10 @@ public class HomeStateListAdapter extends BaseAdapter{
     final int TYPE_4 = 3;
     final int TYPE_5 = 4;
     final int TYPE_6 = 5;
+    String[] values=null;
 
 
-    public HomeStateListAdapter(HomeStateFragment context, ArrayList<HashMap<String, Object>> list) {
+    public HomeStateListAdapter(HomeStateFragment context, String[] list) {
         mContext = context;
         ls = list;
 
@@ -47,12 +50,12 @@ public class HomeStateListAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return ls.size();
+        return ls.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return ls.get(position);
+        return ls[position];
     }
 
     @Override
@@ -85,6 +88,7 @@ public class HomeStateListAdapter extends BaseAdapter{
 
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
+        values = new String[]{"18", "17%","2000pph","18%","sdf","asdf"};
         Log.e("TGA","======getview===="+position);
         ViewHolder1 holder1 = null;
         ViewHolder2 holder2 = null;
@@ -329,34 +333,34 @@ public class HomeStateListAdapter extends BaseAdapter{
         switch (type) {
             case TYPE_1:
                 holder1.textView11.setText("温度");
-                holder1.textView12.setText("18");
+                holder1.textView12.setText(ls[0]);
                 holder1.l1.setVisibility(View.GONE);
                 break;
             case TYPE_2:
                 holder2.textView21.setText("空气湿度");
-                holder2.textView22.setText("17%");
+                holder2.textView22.setText(ls[1]);
                 holder2.l2.setVisibility(View.GONE);
 //                holder2.totaldistance2.setText(ls.get(position)
                 break;
             case TYPE_3:
                 holder3.textView31.setText("CO2");
-                holder3.textView32.setText("2000pph");
+                holder3.textView32.setText(ls[2]);
                 holder3.l3.setVisibility(View.GONE);
                 break;
             case TYPE_4:
                 holder4.textView41.setText("土壤湿度");
-                holder4.textView42.setText("18%");
+                holder4.textView42.setText(ls[3]);
                 holder4.l4.setVisibility(View.GONE);
                 break;
             case TYPE_5:
                 holder5.textView51.setText("电导率");
-                holder5.textView52.setText("2000uS/cm²");
+                holder5.textView52.setText(ls[4]);
                 holder5.l5.setVisibility(View.GONE);
 //                holder2.totaldistance2.setText(ls.get(position)
                 break;
             case TYPE_6:
                 holder6.textView61.setText("盐分");
-                holder6.textView62.setText("1000mg/L");
+                holder6.textView62.setText(ls[5]);
                 holder6.l6.setVisibility(View.GONE);
                 break;
         }
