@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2sp"
+                >
+    <android.support.v7.widget.CardView
+        android:id="@+id/log_card"
+
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/log_target"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="对象:"/>
+            <TextView
+                android:id="@+id/log_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类型:"/>
+            <TextView
+                android:id="@+id/log_commond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="命令:"/>
+            <TextView
+                android:id="@+id/log_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="时间:"/>
+            <TextView
+                android:id="@+id/log_sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="发布者："/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
